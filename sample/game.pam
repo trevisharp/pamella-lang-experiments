@@ -1,7 +1,11 @@
 view game obj pontuation
 {
-    x = rand * (width - 100)
-    y = rand * (height - 100)
+    limitX = width - 100
+    limitY = height - 100
+
+    x = rand { 0 limitX }
+    y = rand { 0 limitY }
+    
     dx = choose { -5 5 }
     dy = choose { -5 5 }
 
@@ -9,4 +13,12 @@ view game obj pontuation
 
     x += dx
     y += dy
+
+    when x < 0 or x > limitX {
+        dx = -dx
+    }
+
+    when y < 0 or y > limitY {
+        dy = -dy
+    }
 }
