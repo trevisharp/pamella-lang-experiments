@@ -1,0 +1,12 @@
+view main = game rand * (width - 100) rand * (height - 100) choose(-5 5) choose(-5 5)
+
+func choose(x y)
+{
+    value = rand(0 1)
+    
+    if value < .5 {
+        return x
+    }
+
+    return y
+}

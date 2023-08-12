@@ -1,0 +1,27 @@
+view counter x y
+{
+    count = 0
+    area = rect { x y 100 100 }
+    message = "Clique em mim"
+    clicked = false
+
+    render
+    {
+        clear white
+        draw text message area
+    }
+
+    frame
+    {
+        if !clicked and cursor in area and mousedown {
+            clicked = true
+        }
+        else if clicked and cursor in area and mouseup {
+            count++
+            clicked = false
+        }
+        else if cursor not in area {
+            clicked = false
+        }
+    }
+}

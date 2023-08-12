@@ -1,0 +1,18 @@
+view game x y vx vy =
+    container
+    {
+        counter { x y }
+        frame
+        {
+            x += vx
+            y += vy
+
+            if x < 0 or x + 100 > width {
+                vx = -vx
+            }
+
+            if y < 0 or y + 100 > height {
+                vy = -vy
+            }
+        }
+    }
