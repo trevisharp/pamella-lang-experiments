@@ -1,0 +1,19 @@
+Uma configuração um pouco pesada para atender a alguns dos tutoriais que envolvem
+geração de código por parte do ANTLR. Algumas coisas não são tão claras na documentação
+quanto a isso.
+Supreendentemente, consegui gerar arquivos a partir do meu .g4, contudo, os arquivos
+gerados são em Java. Isso é confuso, pois realmente pode ser o objeto embora sinta que
+não é o caso.
+Aparentemente posso fazer o que quero baixando uma versão em Java. Irei testar a versão
+para Python que certamente é mais simples e tem mais suporte por parte da documentação.
+Surpreendetemente a instalação em Python não é trivial, o que é uma surpresa, nada que
+seja um problema. Precise até mexer em variáveis de ambiente.
+Precisei atualizar o Java para obter sucesso. Até agora ANTLR mostrou pontos negativos
+quanto a inicialização de um projeto.
+Consegui gerar o código python através de um .g4 usando o seguinte comando: 
+C:\Users\Usuário\AppData\Local\Packages\
+PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\
+Scripts\antlr4.exe -Dlanguage=Python3 -visitor .\Speak.g4
+Que talvez pudesse ser executado apenas como:
+.\antlr4.exe -Dlanguage=Python3 -visitor .\Speak.g4
+Porém ao atualizar o Java o .\antlr4.exe não é mais reconhecido por algum motivo.
