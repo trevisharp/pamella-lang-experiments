@@ -1,0 +1,22 @@
+app
+{
+    pontuation = 0
+    games = container
+    {
+        game { counter pontuation }
+    }
+
+    clear white
+
+    games
+
+    draw text pontuation rect { 5 5 200 20 }
+
+    on pontuation > 10 {
+        games add game { counter pontuation } 
+    }
+
+    on pontuation > 20 {
+        game add game { counter pontuation }
+    }
+}
