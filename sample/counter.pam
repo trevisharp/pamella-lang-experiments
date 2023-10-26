@@ -3,7 +3,7 @@ view counter x y pontuation
     area = rect { x y 100 100 }
     clicked = false
 
-    draw text "Clique em mim" area
+    write "Clique em mim" area
 
     when !clicked and cursor in area and mousedown {
         clicked = true

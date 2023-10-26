@@ -10,7 +10,7 @@ app
 
     games
 
-    draw text pontuation rect { 5 5 200 20 }
+    write pontuation rect { 5 5 200 20 }
 
     on pontuation > 10 {
         games add game { counter pontuation } 
